@@ -13,8 +13,7 @@ require 'net/http'
 
 
 class Scraper
-  attr_accessor :pageBooks, :books, :servers
-  attr_reader :site
+  attr_reader :pageBooks, :books, :servers, :site
 
   def initialize
 	  @site = 'http://www.xxxxxxxx.xxx/'	# important last slash
