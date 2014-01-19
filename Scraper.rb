@@ -11,6 +11,7 @@ require 'fileutils'
 require 'open-uri'
 require 'net/http'
 
+require 'yaml'
 
 class Scraper
   attr_reader :pageBooks, :books, :servers, :site
