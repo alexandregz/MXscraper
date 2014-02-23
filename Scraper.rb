@@ -192,6 +192,36 @@ end
 
 
 
+#
+# DOWNLOAD FROM url
+#
+scrap = Scraper.new
+scrap.pageBooks = ["http://www.xxxxx.xxx/xxx-xxx-xxxxx/"]
+
+scrap.pageBooks.each do |page|
+  puts "Opening page "+page
+  scrap.getLinkEmbeduploadAndImgDescription(page)
+end
+
+scrap.books.each do |book|
+  scrap.getLinkToJDownloader(book)
+
+  puts "creating infor into filesystem about "+book[0]
+  scrap.createDescImageBook(book)
+  scrap.addToJDownloader(book)
+end
+
+exit
+#
+#
+#
+
+
+
+
+
+
+
 # lastPage = Scraper.new.getLastPage 
 # #for i in lastPage.to_i-20..lastPage.to_i
 
